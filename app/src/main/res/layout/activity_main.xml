@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,64 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="원카드 규칙 소개!"
+        android:gravity="center|top"
+        android:textSize="30dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/txtIntro"/>
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="1. 자신의 모든 카드를 먼저 소모한 사람이 승리, 20장 이상은 파산으로 간주하고 그 사람은 게임에서 패배"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ruleOne"
+        android:layout_below="@+id/txtIntro"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. 한 턴당 한 장씩 낼 수 있고 K와 J의 경우 한 번 더 낼 수 있음"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ruleTwo"
+        android:layout_below="@+id/ruleOne"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3. 공격 카드는 2와 A 그리고 조커만 인정 2는 2장, A는 3장(스페이드는 5장) 조커는 흑백 조커는 5장 칼라 조커는 7장을 먹일 수 있음 방어카드는 인정하지 않음"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ruleThree"
+        android:layout_below="@+id/ruleTwo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4. 게임 인원은 2명, 그러므로 Q는 내는 즉시 턴이 넘어감"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ruleFour"
+        android:layout_below="@+id/ruleThree"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ruleFour"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
+        android:text="게임 시작"
+        android:gravity="center"
+        android:id="@+id/btnStart"/>
+</RelativeLayout>
