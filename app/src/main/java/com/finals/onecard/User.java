@@ -15,6 +15,8 @@ public class User {
         this.turn = turn;
     }
 
+    public boolean getTurn() { return this.turn; }
+
     public void addCard(Card card) {
         this.cards.add(card);
     }
