@@ -8,6 +8,7 @@ public class NotUser {
 
     public NotUser() {
         this.cards = new ArrayList<>();
+
     }
 
     public void cardShuffle() {
@@ -17,6 +18,8 @@ public class NotUser {
     public void addCard(Card card) {
         this.cards.add(card);
     }
+
+    public int cardLength() { return this.cards.size(); }
 
     public Card pop() {
         return this.cards.remove(0);

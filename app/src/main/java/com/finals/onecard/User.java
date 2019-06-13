@@ -22,4 +22,12 @@ public class User {
     public int cardLength() {
         return this.cards.size();
     }
+
+    public int getCardImageId(int index) {
+        return this.cards.get(index).getImageId();
+    }
+
+    public Card getCard(int index) {
+        return this.cards.get(index);
+    }
 }
